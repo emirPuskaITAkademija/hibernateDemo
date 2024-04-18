@@ -1,4 +1,5 @@
 *** Project description ***
+
 We have configured Hibernate in old fashion way without JPA spec implemented by Hibernate.
 
 There are few steps required to achieve this:
