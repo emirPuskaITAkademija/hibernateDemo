@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Employee implements Serializable {
+public non-sealed class Employee extends AbstractEmployee implements Serializable {
     private Long id;
 
     private String firstName;
@@ -20,40 +20,45 @@ public class Employee implements Serializable {
         return id;
     }
 
-    public void setId(Long id) {
+    public Employee setId(Long id) {
         this.id = id;
+        return this;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public Employee setFirstName(String firstName) {
         this.firstName = firstName;
+        return this;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public Employee setLastName(String lastName) {
         this.lastName = lastName;
+        return this;
     }
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
+    public Employee setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+        return this;
     }
 
     public Boolean getEmployed() {
         return employed;
     }
 
-    public void setEmployed(Boolean employed) {
+    public Employee setEmployed(Boolean employed) {
         this.employed = employed;
+        return this;
     }
 
     @Override
